@@ -1,5 +1,7 @@
 ﻿// SISTEMA DE INVENTARIO - Módulo 2 Completo
 using System.Reflection;
+using System.Text.RegularExpressions;
+using InventarioApp.Models;
 
 var assembly = Assembly.GetExecutingAssembly();
 var version = assembly.GetName().Version;
@@ -26,7 +28,7 @@ while (continuar)
     {
         Funcion = "salir"; // Comando por defecto
     }
-    string comando = LeerEntrada(Funcion);
+    string comando = LeerEntrada(Funcion); 
     continuar = ProcesarComando(comando);
 }
 
